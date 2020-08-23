@@ -1,0 +1,10 @@
+{
+	"name": "FathomAnalytics",
+	"author": "Matthew Jorgensen",
+	"url": "https://git.sr.ht/~mjorgensen/MediaWiki-FathomAnalytics",
+	"description": "Adds <script> tag for Fathom Analytics.",
+	"version": "0.1",
+	"license-name": "GPL-2.0-or-later",
+	"type": "other",
+	"manifest_version": 2
+}
