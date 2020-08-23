@@ -3,8 +3,14 @@
 	"author": "Matthew Jorgensen",
 	"url": "https://git.sr.ht/~mjorgensen/MediaWiki-FathomAnalytics",
 	"description": "Adds <script> tag for Fathom Analytics.",
-	"version": "0.1",
-	"license-name": "GPL-2.0-or-later",
+	"version": "1.0",
+	"license-name": "GPL-3.0-or-later",
 	"type": "other",
-	"manifest_version": 2
+	"manifest_version": 2,
+	"AutoloadClasses": {
+		"FathomAnalytics": "includes/FathomAnalytics.php"
+	},
+	"Hooks": {
+		"SkinAfterBottomScripts": "FathomAnalytics::onSkinAfterBottomScripts"
+	}
 }

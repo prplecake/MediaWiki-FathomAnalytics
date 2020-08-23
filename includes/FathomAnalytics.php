@@ -4,7 +4,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	die( 'This file is a MediaWiki extension, it is not a valid entry point.' );
 }
 
-$wgExtensionCredits[$type][] = [
+$wgExtensionCredits['other'][] = [
 	'path' => __FILE__,
 	'name' => 'Fathom Analytics',
 	'version' => '0.1',
@@ -13,11 +13,8 @@ $wgExtensionCredits[$type][] = [
 	'license-name' => 'GPL-2.0-or-later'
 ];
 
-$wgFathomAnalyticsURL = '';
-$wgFathomAnalyticsSiteID = '';
-
 class FathomAnalytics {
-	public static function onSkinAfterBottomScripts( Skin $skin, &$text = '' ) {
+	public static function onSkinAfterBottomScripts( $skin, &$text = '') {
 		global $wgFathomAnalyticsURL, $wgFathomAnalyticsSiteID;
 
 		if ( $skin->getUser()->isAllowed( 'noanalytics' ) ) {
@@ -25,14 +22,18 @@ class FathomAnalytics {
 			return true;
 		}
 
+		if ( $wgFathomAnalyticsURL == '' ) {
+			$wgFathomAnalyticsURL = 'https://cdn.usefathom.com/script.js';
+		}
+
 		$appended = false;
-		if ( $wgFathomAnalyticsURL !== '' && $wgFathomAnalyticsSiteID !== '') {
-			$text .= "<script src=" . $wgFathomAnalyticsURL . " site=" . $wgFathomAnalyticsSiteID . " defer></script>";
+		if ( $wgFathomAnalyticsSiteID !== '') {
+			$text .= "<script src=" . $wgFathomAnalyticsURL . " site=" . $wgFathomAnalyticsSiteID . " defer></script>\r\n";
 			$appended = true;
 		}
 
 		if ( !$appended ) {
-			$text .= "<!-- No anayltics configured. -->\r\n";
+			$text .= "<!-- No analytics configured. -->\r\n";
 		}
 		return true;
 	}
