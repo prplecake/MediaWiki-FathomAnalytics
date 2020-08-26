@@ -10,9 +10,11 @@ files
 should end up in a directory called `FathomAnalytics` inside your
 `extensions/` directory.
 1. Add the following to the bottom of your `LocalSettings.php`:
+   
    ```php
    wfLoadExtension( "FathomAnalytics" );
    ```
+
 1. **Done!**
 
 ## Configuration
