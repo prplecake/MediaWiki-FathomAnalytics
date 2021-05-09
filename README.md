@@ -33,14 +33,3 @@ wfLoadExtension( "FathomAnalytics" );
 $wgFathomAnalyticsURL = "https://candle.example.com/script.js";
 $wgFathomAnalyticsSiteID = "ABCDEFGH";
 ```
-
-## Resources
-
-Discussion and patches are welcome and should be directed to the project
-mailing list: [~mjorgensen/mw-fathomanalytics@lists.sr.ht][lists].
-
-Bugs, issues, planning, and tasks can all be found at the tracker: 
-[~mjorgensen/MediaWiki-FathomAnalytics][todo].
-
-[lists]:https://lists.sr.ht/~mjorgensen/mw-fathomanalytics
-[todo]:https://todo.sr.ht/~mjorgensen/MediaWiki-FathomAnalytics
