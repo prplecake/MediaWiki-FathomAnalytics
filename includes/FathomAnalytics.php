@@ -9,7 +9,7 @@ $wgExtensionCredits['other'][] = [
 	'name' => 'Fathom Analytics',
 	'version' => '0.1',
 	'author' => "Matthew Jorgensen",
-	'url' => 'https://git.sr.ht/~mjorgensen/MediaWiki-FathomAnalytics',
+	'url' => 'https://github.com/prplecake/MediaWiki-FathomAnalytics',
 	'license-name' => 'GPL-2.0-or-later'
 ];
 
